@@ -1,0 +1,12 @@
+.banner-slider {
+  .slick-list,
+  .slick-track {
+    display: flex !important;
+    align-items: stretch !important;
+  
+    .slick-slide {
+      position: relative;
+      height: auto !important;
+    }
+  }  
+}

@@ -1,0 +1,62 @@
+/* styles/nprogress.scss */
+#nprogress {
+  pointer-events: none;
+
+  .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1031;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color, #f7265d); // Using your primary color
+    box-shadow: 0 1px 3px rgba(var(--primary-color-rgb, 79, 70, 229), 0.2);
+
+    // Animation
+    transform-origin: left;
+    transition: transform 0.2s linear;
+  }
+
+  .peg {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    opacity: 1;
+    transform: rotate(3deg) translate(0px, -4px);
+
+    // Glow effect with primary color
+    box-shadow:
+      0 0 10px var(--primary-color, #f7265d),
+      0 0 5px var(--primary-color, #f7265d);
+  }
+
+  .spinner {
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1031;
+  }
+
+  .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    border-top-color: var(--primary-color, #f7265d);
+    border-left-color: var(--primary-color, #f7265d);
+    border-radius: 50%;
+    animation: nprogress-spinner 400ms linear infinite;
+  }
+}
+
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

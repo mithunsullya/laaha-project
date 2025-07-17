@@ -1,0 +1,38 @@
+module.exports = {
+  name: "Laaha",
+  slogan: "The laaha site built as a headless Drupal with Next.js",
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
+  drupalBaseUrl: process.env.NEXT_PUBLIC_DRUPAL_BASE_URL,
+  defaultLocale: "en",
+  rtlLocales: ["ar", "prs", "ku", "ps"], // Lang code
+  locales: {
+    ar: "Arabic ( عربى )",
+    my: "Burmese ( မြန်မာစာ)",
+    prs: "Dari (دری)",
+    en: "English",
+    fr: "French (français)",
+    ku: "Kurdish ( کوردی )",
+    ln: "Lingala",
+    ps: "Pashto (پشتو)",
+    ro: "Romanian",
+    ru: "Russian",
+    es: "Spanish (Español)",
+    sw: "Swahili",
+    tr: "Turkish (Türkçe)",
+    uk: "Ukrainian (українська)",
+  },
+  deployCountries: {
+    "AF": "ps",
+    "CD": "sw",
+    "MD": "ro",
+    "ES": "es",
+    "EC": "es",
+    "IQ": "ar",
+    "LB": "ar",
+    "MM": "my",
+    "PS": "ar",
+    "UA": "uk",
+    "VE": "es",
+    "SY": "ar",
+  }
+}

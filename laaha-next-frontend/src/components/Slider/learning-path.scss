@@ -1,0 +1,61 @@
+.learning-path-slider {
+  .slick-slide {
+    display: flex !important;
+    height: auto !important;
+  }
+  
+  .slick-slide > div {
+    display: flex !important;
+    flex: 1;
+  }
+
+  .cta__explore:hover {
+    transition: 0.2s ease all;
+
+    span {
+      transition: 0.2s ease all;
+      transform: translateX(3px);
+    }
+  }
+  
+  .slick-track {
+    display: flex !important;
+    align-items: stretch;
+    margin-inline-start: calc(15% - 8px);
+  }
+
+  .slick-list {
+    margin-inline-start: calc(50vw - 614px);
+  }
+
+  &::before {
+    content: "";
+    background: url(/assets/images/background-curve.svg);
+    width: 98vw;
+    position: absolute;
+    left: 0;
+    right: auto;
+    z-index: -1;
+    height: 100%;
+    top: -20%;
+  }
+
+  &[dir="rtl"] {
+    .slick-list {
+      margin-inline-end: calc(50vw - 640px);
+      margin-inline-start: 0;
+    }
+
+    .slick-track {
+      margin-inline-start: 0;
+      margin-inline-end: calc(15% - 8px);
+    }
+  }
+}
+
+[dir="rtl"] .learning-path-slider {
+  .carousel-card-wrapper .cta__explore span {
+    transform: rotate(-180deg);
+    top: -3px;
+  }
+}

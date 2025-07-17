@@ -1,0 +1,12 @@
+.explore-special {
+  .slick-slide,
+  .slick-track {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  .slick-slide {
+    height: auto;
+  }
+}
